@@ -7,6 +7,7 @@ import Data.Sequence hiding (length)
 
 -------------------------------------------------------------------------------
 -- enviornment and language
+--
 
 data Tape = Tape { tape :: Seq Int
                  , ptr  :: Int
