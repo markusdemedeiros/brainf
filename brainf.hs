@@ -1,4 +1,4 @@
--- Monadic BrainFuck Interpreter
+-- monadic brainfuck interpreter
 
 import Control.Monad.Identity
 import Control.Monad.Reader
@@ -37,7 +37,7 @@ tapePrint t         = putStrLn
                         $ show . length . tape 
                         $ t
 
--- brainFuck language
+-- brainfuck language
 data Cmd            = End
                     | Rgt Cmd       -- Tape right
                     | Lft Cmd       -- Tape left
