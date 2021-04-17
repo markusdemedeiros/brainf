@@ -4,6 +4,7 @@ import Control.Monad.Identity
 import Control.Monad.Reader
 import Control.Monad.State
 import Data.Sequence hiding (length)
+import Data.Foldable
 
 -------------------------------------------------------------------------------
 -- enviornment and language
@@ -65,7 +66,7 @@ eval (Inc c)        = do
                         showInt "+"
                         local tapeInc (eval c)
 eval (Dec c)        = do
-                        showInt "+"
+                        showInt "-"
                         local tapeDec (eval c)
 eval (Lft c)        = do
                         showInt "<"
